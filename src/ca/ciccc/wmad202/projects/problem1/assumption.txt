@@ -1,0 +1,34 @@
+
+
+A. Peak , B. Valleys
+
+
+1.
+- input array from castles.txt file ( using 'Scanner' ) in parent class.
+  ( * make sure throw built-in exception. ) 
+
+2.
+- in the inner class, has a method wil return an array of answer integer.
+
+3.
+- create interface for creteria of abstract maximum number. 
+
+4.
+- make classes( A ,B ) that has inner class, which is executing lamdba expression( class-A ) and anonimous class ( class-B ).  
+
+5.
+- each class's method will return the "number" of the peak.
+
+
+
+-------- < what I am using ... > ----------------------------
+
+* anonimous class
+* lambda expression
+* single repository concept ( one class has one method )
+* nested class
+* using interface 
+* Iterator
+* testing, throwing exception
+
+( * inserting comments )

@@ -1,0 +1,12 @@
+
+what we should display as result.
+  a. The number of battles
+  b. The winning team
+  c. The surviving members of the losing team
+
+how we should implement this ... ?
+
+  - creating class for each 'transfomers'. that class has each criteria that is mede up by 1-10 ,name and type. ( gonna be Comparable class )
+  
+  - Comparable => By "overall rating" ( = Strength + Intelligence + Speed + Endurance + Firepower ), but sepecial case is the class's "name" property is "Optimus Prime" or "Predaking"
+

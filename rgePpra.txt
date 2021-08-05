@@ -1,0 +1,44 @@
+abcdefghijklmnopqrstuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+Ha HaHa
+
+MetaCharacter (Need to be escaped):
+.[{()\^$|?*+
+
+coreyms.com
+
+321-555-4321
+123.555.1234
+123*34331322
+
+800-555-4321
+900-555-1232
+
+Mr. Schafer
+Mr Smith
+Ms Davis
+Mrs. Rob
+
+cat
+mat
+pat
+bat
+
+CoreyMSchafer@gmail.com
+coery.schafer@university.edu
+corey-321-schafer@my-work.net
+
+
+https://www.google.com
+http://coreyms.com
+https://youtube.com
+https://www.nasa.gov
+
+
+ex. when you wanna replace these as a group.
+capturing the gruop of regular expression
+http(s)? :// (www\.)? (\w+) (\.\w+)
+            ---------
+
+$1 means first group we can take underlined group.
