@@ -1,12 +1,49 @@
 
-what we should display as result.
+
+***** SIMPLE-RULE ******************************************
+  - Comparable <Simple rule> -
+    => By "overall rating" ( = Strength + Intelligence + Speed + Endurance + Firepower )
+
+***** SEPECIAL-RULE ****************************************
+  - < (Property)Name >
+     the opponent class's "name" property is "Optimus Prime" or "Predaking"
+      => automatically lose.
+
+  - < Courage >
+    for any fighter down for 4 or less. 
+      => automatically lose.
+    VS. opponents compared to the opponents ( -3 or less )
+      => automatically lose.
+
+  - < Skill >
+    VS. opponents compared to the your own "Skill" by 3 points or less points.
+      => automatically lose.
+
+***** DON'T ***********************************************
+  - When 2 vs 1 situation, do not implement battle twice.this case is gonna implement one time.
+
+  - once a transformer lose a battle, don't fight back against him.
+***********************************************************
+
+
+--- What we should display as result. ---
   a. The number of battles
   b. The winning team
-  c. The surviving members of the losing team
+  c. The surviving members of the losing team ( because in the 1 vs 2 situation, battle is gonna fire one fight. )
 
-how we should implement this ... ?
 
-  - creating class for each 'transfomers'. that class has each criteria that is mede up by 1-10 ,name and type. ( gonna be Comparable class )
-  
-  - Comparable => By "overall rating" ( = Strength + Intelligence + Speed + Endurance + Firepower ), but sepecial case is the class's "name" property is "Optimus Prime" or "Predaking"
 
+--- How we should implement this ... ? ---
+1. inside "InputAndCreateTransformers.java"
+  - input data from .txt file and convert to an array. ( Sorting by regular expression )
+
+
+2. inside "InputAndCreateTransformers.java" file
+  - create each instance from the array. 
+  - and sort those "team1" and "team2" as array.
+  - inside the team array, sorting by "overall rating"
+  - and then return those array in the method.
+
+
+3. inside "Driver.java" file
+  - compare those each other by rule. 
