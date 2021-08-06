@@ -2,7 +2,7 @@ package ca.ciccc.wmad202.projects.problem2;
 
 import java.util.ArrayList;
 
-public class Transformers implements Comparable<Autobots> {
+public class Transformers implements Comparable<Type> {
 
   // store each indentity.
   public String name;
@@ -17,7 +17,7 @@ public class Transformers implements Comparable<Autobots> {
   }
 
   @Override
-  public int compareTo(Autobots o) {
+  public int compareTo(Type E) {
     return 0;
   }
 

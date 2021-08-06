@@ -3,9 +3,12 @@ package ca.ciccc.wmad202.projects.main;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import javax.xml.transform.Transformer;
+
 import ca.ciccc.wmad202.projects.problem1.Peak;
 import ca.ciccc.wmad202.projects.problem1.returnInterface;
 import ca.ciccc.wmad202.projects.problem1.Peak.InnerPeak;
+import ca.ciccc.wmad202.projects.problem2.Test;
 
 public class Driver {
   public static void main(String[] args) {
@@ -75,6 +78,9 @@ public class Driver {
 
     // ----------------------- < problem 2 > --------------------------
     System.out.println(" ------------ < problem 2 > ----------- ");
+
+    // receive an array of instances.
+    ArrayList<Transformer> transformersBattleArray = Test.CreateInstanceOfTransfomers();
 
   }
 

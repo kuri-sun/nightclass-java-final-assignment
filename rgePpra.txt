@@ -46,3 +46,41 @@ $1 means first group we can take underlined group.
 
 // this regular expression.
 [A-Za-z]+,\s[a-zA-Z],\s([0-9],)+[0-9]+
+
+
+
+
+
+
+      // current line is even or odd ??
+      WhichTeamCount++;
+      // take all words of one line.
+      String words = in.nextLine();
+
+      // check if two-row blanks there
+      if (in.nextLine().length() == 0) {
+
+        // add oneBattle Array to allBattle Array
+        battles.add(oneBattle);
+      }
+
+      // define two arraies team-A and team-B.
+      ArrayList<ArrayList<ArrayList<Integer>>> oneBattle = new ArrayList<>();
+      ArrayList<ArrayList<String>> teamA = new ArrayList<>();
+      ArrayList<ArrayList<String>> teamB = new ArrayList<>();
+      ArrayList<String> transformer = new ArrayList<>();
+
+      for (int i = 0; i < words.length(); i++) {
+
+        String elementWord = "";
+
+        if (words.charAt(i) == '*') {
+          if (WhichTeamCount % 2 != 0) {
+            teamA.add(transformer);
+          } else {
+            teamB.add(transformer);
+          }
+        }
+
+      }
+      // split out each battle.
