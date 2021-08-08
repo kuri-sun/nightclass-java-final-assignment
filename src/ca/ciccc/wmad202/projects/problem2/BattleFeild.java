@@ -35,13 +35,9 @@ public class BattleFeild {
             "battle is not occurable because your entered infomation in .txt is wrong...");
       }
 
-      int round = 0;
-
       // LIST OF WHAT WE SHOULD DISPLAY.
       // ----- start battles one-team vs one-team. ----------------------------
       for (int i = 0; i < team_A.size(); i++) {
-
-        round++;
 
         ArrayList<String> displayList = new ArrayList<>();
 
@@ -81,13 +77,20 @@ public class BattleFeild {
         ArrayList<Transformers> teamAonBattleFeild_sorted = SortbyRank.sortingByRank(teamAonBattleFeild);
         ArrayList<Transformers> teamBonBattleFeild_sorted = SortbyRank.sortingByRank(teamBonBattleFeild); //
 
-        int battleWillNotOccursNumbersToSupportIndex = Math
-            .abs(teamAonBattleFeild_sorted.size() - teamBonBattleFeild_sorted.size());
+        int numbersOfmembersInTeamA = teamAonBattleFeild_sorted.size();
+        int numbersOfmembersInTeamB = teamBonBattleFeild_sorted.size();
+        int fewestMembersTeam;
+        if (numbersOfmembersInTeamA > numbersOfmembersInTeamB) {
+          fewestMembersTeam = numbersOfmembersInTeamB;
+        } else {
+          fewestMembersTeam = numbersOfmembersInTeamA;
+        }
 
         int indexForTeamA = 0;
         int indexForTeamB = 0;
         int winningTeamAcount = 0;
         int winningTeamBcount = 0;
+        int drowcount = 0;
 
         // -----// start one on one //-----
         while ((wingingTeam == "")
@@ -166,14 +169,8 @@ public class BattleFeild {
             } else if (winner.contains("drow")) {
               indexForTeamA++;
               indexForTeamB++;
+              drowcount++;
             }
-
-            System.out.println("(A)" + round + "round, " + numberOfBattles + "battle, " + indexForTeamA + "index, "
-                + winningTeamAcount + "-" + winningTeamBcount + "count  |  " + teamAonBattleFeild_sorted);
-            System.out.println();
-            System.out.println("(B)" + round + "round, " + numberOfBattles + "battle, " + indexForTeamB + "index, "
-                + winningTeamAcount + "-" + winningTeamBcount + "count  |  " + teamBonBattleFeild_sorted);
-            System.out.println("\n");
 
           }
 
@@ -188,20 +185,23 @@ public class BattleFeild {
 
             // System.out.println(teamAonBattleFeild_sorted.size() == indexForTeamA);
 
-            if (teamBonBattleFeild_sorted.size() == (indexForTeamB + battleWillNotOccursNumbersToSupportIndex)
+            if (fewestMembersTeam == (winningTeamAcount + winningTeamBcount + drowcount)
                 && (winningTeamAcount > winningTeamBcount)) {
-              wingingTeam = "(Deception Team)";
-              survivingMembersInLosingTeam = "(Autobot Team)"; //
 
-            } else if (teamAonBattleFeild_sorted.size() == (indexForTeamA + battleWillNotOccursNumbersToSupportIndex)
+              wingingTeam = "(Deception Team) ";
+              survivingMembersInLosingTeam = "(Autobot Team) ";
+
+            } else if (fewestMembersTeam == (winningTeamAcount + winningTeamBcount + drowcount)
                 && (winningTeamBcount > winningTeamAcount)) {
-              wingingTeam = "(Autobot Team)";
-              survivingMembersInLosingTeam = "(Deception Team)";
 
-            } else if ((teamAonBattleFeild_sorted.size() == indexForTeamA
-                && teamBonBattleFeild_sorted.size() == indexForTeamB) && (winningTeamAcount == winningTeamBcount)) {
-              wingingTeam = "(Drow)";
-              survivingMembersInLosingTeam = "(Drow)";
+              wingingTeam = "(Autobot Team) ";
+              survivingMembersInLosingTeam = "(Deception Team) ";
+
+            } else if (fewestMembersTeam == (winningTeamAcount + winningTeamBcount + drowcount)
+                && (winningTeamAcount == winningTeamBcount)) {
+
+              wingingTeam = "(Drow) ";
+              survivingMembersInLosingTeam = "(Drow) ";
 
             }
 
@@ -214,32 +214,34 @@ public class BattleFeild {
 
             if (wingingTeam != "") {
 
-              if ((teamAonBattleFeild_sorted.size() > 0) && wingingTeam.contains("Autobot")) {
+              if ((teamAonBattleFeild_sorted.size() > 0)
+                  && (wingingTeam.contains("Autobot") || wingingTeam.contains("Drow"))) {
 
                 // add survivers in "loser team" to "survivingMembersInLosingTeam"
                 if (teamBonBattleFeild_sorted.size() > 0) {
                   for (Transformers remainingTransOnWinnerTeam : teamBonBattleFeild_sorted) {
-                    wingingTeam = wingingTeam + " " + remainingTransOnWinnerTeam.name;
+                    wingingTeam = wingingTeam + " " + remainingTransOnWinnerTeam.name + ",";
                   }
                 }
 
                 // add survivers in "loser team" to "survivingMembersInLosingTeam"
                 for (Transformers remainingTrans : teamAonBattleFeild_sorted) {
-                  survivingMembersInLosingTeam = survivingMembersInLosingTeam + " " + remainingTrans.name;
+                  survivingMembersInLosingTeam = survivingMembersInLosingTeam + " " + remainingTrans.name + ",";
                 }
 
-              } else if ((teamBonBattleFeild_sorted.size() > 0) && wingingTeam.contains("Deception")) {
+              } else if ((teamBonBattleFeild_sorted.size() > 0)
+                  && (wingingTeam.contains("Deception") || wingingTeam.contains("Drow"))) {
 
                 // add survivers in "loser team" to "survivingMembersInLosingTeam"
                 if (teamAonBattleFeild_sorted.size() > 0) {
                   for (Transformers remainingTransOnWinnerTeam : teamBonBattleFeild_sorted) {
-                    wingingTeam = wingingTeam + " " + remainingTransOnWinnerTeam.name;
+                    wingingTeam = wingingTeam + " " + remainingTransOnWinnerTeam.name + ",";
                   }
                 }
 
                 // add survivers in "loser team" to "survivingMembersInLosingTeam"
                 for (Transformers remainingTrans : teamBonBattleFeild_sorted) {
-                  survivingMembersInLosingTeam = survivingMembersInLosingTeam + " " + remainingTrans.name;
+                  survivingMembersInLosingTeam = survivingMembersInLosingTeam + " " + remainingTrans.name + ",";
                 }
 
               } else if (teamAonBattleFeild_sorted.size() == 0 && teamBonBattleFeild_sorted.size() == 0) {

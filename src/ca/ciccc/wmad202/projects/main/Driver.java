@@ -11,6 +11,7 @@ import ca.ciccc.wmad202.projects.problem2.BattleFeild.BattleNotOccurableExceptio
 
 public class Driver {
   public static void main(String[] args) {
+    System.out.println("\n");
 
     // ------------------- < problem 1 - Peak - > --------------------
     System.out.println(" ------------ < problem 1 - PEAK - > ----------- ");
@@ -45,6 +46,7 @@ public class Driver {
       System.out.println("The number of Land" + index + "'s-stretch's Peak is : " + answer.next());
     }
 
+    System.out.println("\n");
     // ------------------- < problem 1 - Valley - > --------------------
     System.out.println(" ------------ < problem 1 - VALLEY - > ----------- ");
     ArrayList<ArrayList<Integer>> allStretchLandList2 = Peak.scannerForTxtFile();
@@ -77,7 +79,7 @@ public class Driver {
 
     // ----------------------- < problem 2 > ---------------------------------
     System.out.println("\n");
-    System.out.println(" ------------ < problem 2 > ----------- ");
+    System.out.println("------------- < problem 2 - TRANSFORMER - > ----------- ");
 
     BattleFeild bFeild = new BattleFeild();
     try {
@@ -88,7 +90,7 @@ public class Driver {
         roundOftheBattle++;
 
         // print the result
-        System.out.println("-- ROUND-" + roundOftheBattle + " --");
+        System.out.println("--- ROUND-" + roundOftheBattle + " ---");
         System.out.println("The number of battles : " + eachBattleResult.get(0));
         System.out.println("The winning team : " + eachBattleResult.get(1));
         System.out.println("The surviving members of the losing team : " + eachBattleResult.get(2));
