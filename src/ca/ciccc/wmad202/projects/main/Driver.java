@@ -3,18 +3,17 @@ package ca.ciccc.wmad202.projects.main;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import javax.xml.transform.Transformer;
-
 import ca.ciccc.wmad202.projects.problem1.Peak;
 import ca.ciccc.wmad202.projects.problem1.returnInterface;
 import ca.ciccc.wmad202.projects.problem1.Peak.InnerPeak;
-import ca.ciccc.wmad202.projects.problem2.Test;
+import ca.ciccc.wmad202.projects.problem2.BattleFeild;
+import ca.ciccc.wmad202.projects.problem2.BattleFeild.BattleNotOccurableException;
 
 public class Driver {
   public static void main(String[] args) {
 
     // ------------------- < problem 1 - Peak - > --------------------
-    System.out.println(" ------------ < problem 1 - peak - > ----------- ");
+    System.out.println(" ------------ < problem 1 - PEAK - > ----------- ");
     // create instance of the "Peak" class
     ArrayList<ArrayList<Integer>> allStretchLine1 = Peak.scannerForTxtFile();
 
@@ -47,7 +46,7 @@ public class Driver {
     }
 
     // ------------------- < problem 1 - Valley - > --------------------
-    System.out.println(" ------------ < problem 1 - valley - > ----------- ");
+    System.out.println(" ------------ < problem 1 - VALLEY - > ----------- ");
     ArrayList<ArrayList<Integer>> allStretchLandList2 = Peak.scannerForTxtFile();
 
     // "lamdba expression"
@@ -76,11 +75,30 @@ public class Driver {
       System.out.println("The number of Land" + index2 + "'s-stretch's Valley is : " + answer2.next());
     }
 
-    // ----------------------- < problem 2 > --------------------------
+    // ----------------------- < problem 2 > ---------------------------------
+    System.out.println("\n");
     System.out.println(" ------------ < problem 2 > ----------- ");
 
-    // receive an array of instances.
-    ArrayList<Transformer> transformersBattleArray = Test.CreateInstanceOfTransfomers();
+    BattleFeild bFeild = new BattleFeild();
+    try {
+
+      ArrayList<ArrayList<String>> result = bFeild.battleStart();
+      int roundOftheBattle = 0;
+      for (ArrayList<String> eachBattleResult : result) {
+        roundOftheBattle++;
+
+        // print the result
+        System.out.println("-- ROUND-" + roundOftheBattle + " --");
+        System.out.println("The number of battles : " + eachBattleResult.get(0));
+        System.out.println("The winning team : " + eachBattleResult.get(1));
+        System.out.println("The surviving members of the losing team : " + eachBattleResult.get(2));
+        System.out.println("\n");
+
+      }
+
+    } catch (BattleNotOccurableException e) {
+      e.printStackTrace();
+    }
 
   }
 

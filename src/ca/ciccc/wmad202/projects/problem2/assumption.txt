@@ -12,11 +12,11 @@
   - < Courage >
     for any fighter down for 4 or less. 
       => automatically lose.
-    VS. opponents compared to the opponents ( -3 or less )
+    *VS. opponents compared to the opponents ( -3 or less )
       => automatically lose.
 
   - < Skill >
-    VS. opponents compared to the your own "Skill" by 3 points or less points.
+    *VS. opponents compared to the your own "Skill" by 3 points or less points.
       => automatically lose.
 
 ***** DON'T ***********************************************
