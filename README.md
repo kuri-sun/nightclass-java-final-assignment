@@ -21,7 +21,7 @@ MyCompanyis in the business of building castles. Now, we also believe in quality
 
 Let’s say you have an array of integers that describes a stretch of land, where each integer represents the current height of the land. Can you write a function that reads that array and returns the number of castles that MyCompanyshould build on that stretch of land?
 
-</details><br/>
+</details>
 
 ### ⚡️ RESULT -problem 1
 https://user-images.githubusercontent.com/62743644/128664215-eafcce6b-2a35-4d0e-991e-3270f468709e.mov
@@ -35,7 +35,7 @@ https://user-images.githubusercontent.com/62743644/128664215-eafcce6b-2a35-4d0e-
  - Iterator
  - testing, throwing exception
  - inserting comments 
-<br/>
+ 
 #
 
 <details>
@@ -97,7 +97,7 @@ Special rules:
   •Any Transformer named Optimus Prime or Predakingwins his fight automatically regardless of any other criteria 
   
   •In the event either of the above face each other (or a duplicate of each other), the game immediately ends with all competitors destroyed
-</details><br/>
+</details>
 
 ### ⚡️ RESULT -problem2
 
