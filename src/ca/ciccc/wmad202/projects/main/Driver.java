@@ -79,7 +79,7 @@ public class Driver {
 
     // ----------------------- < problem 2 > ---------------------------------
     System.out.println("\n");
-    System.out.println("------------- < problem 2 - TRANSFORMER - > ----------- ");
+    System.out.println("------------- < problem 2 - TRANSFORMER - > -----------");
 
     BattleFeild bFeild = new BattleFeild();
     try {
