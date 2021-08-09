@@ -2,9 +2,7 @@
 
 FINAL PROJECT for 202 CICCC ( java course by Ali !!! ) 🔥🔥🔥
 
-<img src="https://img.shields.io/badge/project-CICCC-brightgreen">
-<img src="https://img.shields.io/github/stars/kuri-sun/java-202-final-project?style=social">
-<img src="https://img.shields.io/github/watchers/kuri-sun/java-202-final-project?style=social">
+<img src="https://img.shields.io/badge/project-CICCC-brightgreen"> <img src="https://img.shields.io/github/stars/kuri-sun/java-202-final-project?style=social"> <img src="https://img.shields.io/github/watchers/kuri-sun/java-202-final-project?style=social">
 
 
 #
@@ -22,7 +20,7 @@ MyCompanyis in the business of building castles. Now, we also believe in quality
 
 Let’s say you have an array of integers that describes a stretch of land, where each integer represents the current height of the land. Can you write a function that reads that array and returns the number of castles that MyCompanyshould build on that stretch of land?
 
-</details><br/>
+</details>
 
 ### ⚡️ RESULT -problem 1
 <video width="320" height="240" controls>
@@ -37,9 +35,8 @@ Let’s say you have an array of integers that describes a stretch of land, wher
  - Iterator
  - testing, throwing exception
  - inserting comments 
-<br/>
-#
 
+#
 <details>
 <summary>
 Problem-2
@@ -99,7 +96,7 @@ Special rules:
   •Any Transformer named Optimus Prime or Predakingwins his fight automatically regardless of any other criteria 
   
   •In the event either of the above face each other (or a duplicate of each other), the game immediately ends with all competitors destroyed
-</details><br/>
+</details>
 
 ### ⚡️ RESULT -problem2
 <video width="320" height="240" controls>
