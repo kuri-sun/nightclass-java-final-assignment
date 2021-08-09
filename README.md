@@ -1,3 +1,4 @@
+
 # JAVA cource202 FINAL PROJECT
 
 FINAL PROJECT for 202 CICCC ( java course by Ali !!! ) 🔥🔥🔥
@@ -25,8 +26,7 @@ Let’s say you have an array of integers that describes a stretch of land, wher
 </details><br/>
 
 ### ⚡️ RESULT -problem 1
-<video width="320" height="240" controls>
-</video>
+https://user-images.githubusercontent.com/62743644/128664215-eafcce6b-2a35-4d0e-991e-3270f468709e.mov
 
 ### ⚡️ what I am using ...
  - anonimous class
@@ -102,8 +102,9 @@ Special rules:
 </details><br/>
 
 ### ⚡️ RESULT -problem2
-<video width="320" height="240" controls>
-</video>
+
+https://user-images.githubusercontent.com/62743644/128664440-c5b6b786-8d58-43ac-bfc8-44c28a3cb35e.mov
+
 
 ### ⚡️ what I am using ...
  - single repository concept ( one class has one method )
