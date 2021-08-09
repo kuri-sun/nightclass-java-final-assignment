@@ -3,9 +3,7 @@
 
 FINAL PROJECT for 202 CICCC ( java course by Ali !!! ) 🔥🔥🔥
 
-<img src="https://img.shields.io/badge/project-CICCC-brightgreen">
-<img src="https://img.shields.io/github/stars/kuri-sun/java-202-final-project?style=social">
-<img src="https://img.shields.io/github/watchers/kuri-sun/java-202-final-project?style=social">
+<img src="https://img.shields.io/badge/project-CICCC-brightgreen"> <img src="https://img.shields.io/github/stars/kuri-sun/java-202-final-project?style=social"> <img src="https://img.shields.io/github/watchers/kuri-sun/java-202-final-project?style=social">
 
 
 #
